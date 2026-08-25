@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/54e5f94ee4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <section id="landing">
+      <figure class="movie__background__wrapper">
+        <div class="nav__content">
+          <div class="nav__left">
+            <figure class="nav__logo__wrapper">
+              <img src="./assets/movielogo.png" alt="" class="nav__logo" />
+            </figure>
+            <a href="#home" class="nav__link">Home</a>
+            <a href="" class="nav__link">Contact</a>
+          </div>
+          <div class="nav__right">
+            <div class="nav__input__wrapper">
+              <input
+                type="text"
+                class="nav__input"
+                placeholder="Find a movie"
+                onkeyup="searchBarEnter(event)"
+              />
+              <i
+                class="fa-solid fa-magnifying-glass nav__search"
+                onclick="searchActive()"
+              ></i>
+            </div>
+            <i class="fa-solid fa-gear nav__settings"></i>
+          </div>
+        </div>
+        <img
+          src="assets/moviebackground.jpg"
+          alt=""
+          class="movie__background__image"
+        />
+        <div class="movie__background__text">
+          <h1 class="movie__background__title">
+            Ticket<span class="textcolor">+</span>
+          </h1>
+          <h3 class="movie__background__para">
+            With over <span class="textcolor">3000</span> movies on Ticket<span
+              class="textcolor"
+              >+</span
+            >, the possibilites are endless!
+          </h3>
+          <div class="movie__input__wrapper">
+            <input
+              type="text"
+              class="movie__input"
+              placeholder="Find a movie"
+              onkeyup="searchBarEnter(event)"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass movie__search"
+              onclick="searchBarClick()"
+            ></i>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+    <section id="movies">
+      <div class="container">
+        <div class="row">
+          <div class="movies__content">
+            <div class="movies__search__result">
+              <h2 class="movies__title">Search results for:</h2>
+              <h2 class="movie__search__result">""</h2>
+            </div>
+            <div class="movies__list">
+              <i class="fa-solid fa-spinner movies__list__loading"></i>
+              <div class="movie">
+                <figure class="movie__image__wrapper">
+                  <img
+                    src="assets/guardians-poster.jpg"
+                    alt=""
+                    class="movie__image"
+                  />
+                  <h3 class="movie__info__title">
+                    Guardians of the Galaxy Vol. 2
+                  </h3>
+                  <div class="movie__info__list">
+                    <div class="movie__info">
+                      <i class="fa-solid fa-clock movie__info__icon"></i>
+                      <p class="movie__info__text">136m</p>
+                    </div>
+                    <div class="movie__info">
+                      <i class="fa-solid fa-star movie__info__icon"></i>
+                      <p class="movie__info__text">4.5</p>
+                    </div>
+                    <div class="movie__info">
+                      <i
+                        class="fa-solid fa-earth-americas movie__info__icon"
+                      ></i>
+                      <p class="movie__info__text">English</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="movie__title">Guardians of the Galaxy Vol. 2</h4>
+              </div>
+              <div class="movie">
+                <figure class="movie__image__wrapper">
+                  <img
+                    src="assets/the-avengers-poster.jpg"
+                    alt=""
+                    class="movie__image"
+                  />
+                  <h3 class="movie__info__title">The Avengers</h3>
+                  <div class="movie__info__list">
+                    <div class="movie__info">
+                      <i class="fa-solid fa-clock movie__info__icon"></i>
+                      <p class="movie__info__text">136m</p>
+                    </div>
+                    <div class="movie__info">
+                      <i class="fa-solid fa-star movie__info__icon"></i>
+                      <p class="movie__info__text">4.5</p>
+                    </div>
+                    <div class="movie__info">
+                      <i
+                        class="fa-solid fa-earth-americas movie__info__icon"
+                      ></i>
+                      <p class="movie__info__text">English</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="movie__title">The Avengers</h4>
+              </div>
+              <div class="movie">
+                <figure class="movie__image__wrapper">
+                  <img
+                    src="assets/homecoming-poster.jpg"
+                    alt=""
+                    class="movie__image"
+                  />
+                  <h3 class="movie__info__title">Spider-man: Homecoming</h3>
+                  <div class="movie__info__list">
+                    <div class="movie__info">
+                      <i class="fa-solid fa-clock movie__info__icon"></i>
+                      <p class="movie__info__text">136m</p>
+                    </div>
+                    <div class="movie__info">
+                      <i class="fa-solid fa-star movie__info__icon"></i>
+                      <p class="movie__info__text">4.5</p>
+                    </div>
+                    <div class="movie__info">
+                      <i
+                        class="fa-solid fa-earth-americas movie__info__icon"
+                      ></i>
+                      <p class="movie__info__text">English</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="movie__title">Spider-man: Homecoming</h4>
+              </div>
+              <div class="movie">
+                <figure class="movie__image__wrapper">
+                  <img
+                    src="assets/minions-poster.jpg"
+                    alt=""
+                    class="movie__image"
+                  />
+                  <h3 class="movie__info__title">Minions: Rise of Gru</h3>
+                  <div class="movie__info__list">
+                    <div class="movie__info">
+                      <i class="fa-solid fa-clock movie__info__icon"></i>
+                      <p class="movie__info__text">136m</p>
+                    </div>
+                    <div class="movie__info">
+                      <i class="fa-solid fa-star movie__info__icon"></i>
+                      <p class="movie__info__text">4.5</p>
+                    </div>
+                    <div class="movie__info">
+                      <i
+                        class="fa-solid fa-earth-americas movie__info__icon"
+                      ></i>
+                      <p class="movie__info__text">English</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="movie__title">Minions: Rise of Gru</h4>
+              </div>
+              <div class="movie">
+                <figure class="movie__image__wrapper">
+                  <img
+                    src="assets/spider-verse-poster.jpg"
+                    alt=""
+                    class="movie__image"
+                  />
+                  <h3 class="movie__info__title">
+                    Spider-Man: Into the Spider-Verse
+                  </h3>
+                  <div class="movie__info__list">
+                    <div class="movie__info">
+                      <i class="fa-solid fa-clock movie__info__icon"></i>
+                      <p class="movie__info__text">136m</p>
+                    </div>
+                    <div class="movie__info">
+                      <i class="fa-solid fa-star movie__info__icon"></i>
+                      <p class="movie__info__text">4.5</p>
+                    </div>
+                    <div class="movie__info">
+                      <i
+                        class="fa-solid fa-earth-americas movie__info__icon"
+                      ></i>
+                      <p class="movie__info__text">English</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="movie__title">Spider-Man: Into the Spider-Verse</h4>
+              </div>
+              <div class="movie">
+                <figure class="movie__image__wrapper">
+                  <img
+                    src="assets/nope-poster.jpg"
+                    alt=""
+                    class="movie__image"
+                  />
+                  <h3 class="movie__info__title">Nope</h3>
+                  <div class="movie__info__list">
+                    <div class="movie__info">
+                      <i class="fa-solid fa-clock movie__info__icon"></i>
+                      <p class="movie__info__text">136m</p>
+                    </div>
+                    <div class="movie__info">
+                      <i class="fa-solid fa-star movie__info__icon"></i>
+                      <p class="movie__info__text">4.5</p>
+                    </div>
+                    <div class="movie__info">
+                      <i
+                        class="fa-solid fa-earth-americas movie__info__icon"
+                      ></i>
+                      <p class="movie__info__text">English</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="movie__title">Nope</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
