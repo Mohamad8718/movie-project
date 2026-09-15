@@ -9,6 +9,11 @@
     system ui;
 }
 
+.textcolor {
+  color: crimson;
+  font-weight: 300;
+}
+
 body {
   background-color: #1e1e1e;
 }
@@ -26,8 +31,8 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 80px;
-  position: absolute;
   z-index: 1;
+  position: absolute;
   top: 10px;
 }
 
@@ -139,11 +144,6 @@ a {
   width: 100%;
 }
 
-.textcolor {
-  color: crimson;
-  font-weight: 300;
-}
-
 .movie__input {
   padding: 24px 60px 24px 30px;
   border-radius: 40px;
@@ -193,11 +193,32 @@ a {
   padding: 0 40px;
 }
 
-.movies__search__result {
+.movies__top {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 90%;
+}
+
+.movies__top__title {
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.movie__search__result {
+  margin-left: 24px;
+  font-weight: 300;
+  padding: 8px 0;
+  text-shadow:
+    1px 1px 10px crimson,
+    1px 1px 10px crimson;
+  color: crimson;
+  border-bottom: 1.5px solid crimson;
+  display: none;
+}
+
+.movie__search__result__visible .movie__search__result {
+  display: block;
 }
 
 .movies__content {
@@ -311,11 +332,6 @@ a {
   font-size: 15px;
 }
 
-.movies__title {
-  font-size: 32px;
-  font-weight: 200;
-}
-
 .movie__title {
   text-align: center;
   font-weight: 200;
@@ -323,28 +339,12 @@ a {
   padding: 8px 8px 24px 8px;
 }
 
-.movie__search__result {
-  margin-left: 24px;
-  font-weight: 300;
-  padding: 8px 0;
-  text-shadow:
-    1px 1px 10px crimson,
-    1px 1px 10px crimson;
-  color: crimson;
-  border-bottom: 1.5px solid crimson;
-  display: none;
-}
-
-.movie__search__result__visible .movie__search__result {
-  display: block;
-}
-
 @media (max-width: 840px) {
-  .movies__search__result {
+  .movies__top {
     flex-direction: column;
   }
 
-  .movies__title {
+  .movies__top__title {
     margin-bottom: 8px;
   }
 
@@ -373,6 +373,16 @@ a {
   .movie__info__title {
     font-size: 16px;
   }
+
+  .nav__logo__wrapper {
+    width: 72px;
+  }
+
+  .nav__input:focus,
+  .nav__input:active {
+    width: 200px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -382,7 +392,7 @@ a {
   }
 
   .nav__content {
-    padding-top: 24px;
+    padding-top: 16px;
   }
 
   .nav__link {

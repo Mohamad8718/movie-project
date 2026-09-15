@@ -1,4 +1,4 @@
-function searchActive(value) {
+function searchActive() {
   const input = document.querySelector(".nav__input");
   input.focus();
 }
@@ -11,7 +11,7 @@ async function searchBarEnter(event) {
     if (input === document.activeElement) {
       searchResult(value);
       await moviesSearch(value);
-      setTimeout(() => loadingDone(), 1000);
+      return setTimeout(() => loadingDone(), 1000);
     }
     value = document.querySelector(".movie__input").value;
     searchResult(value);
@@ -29,11 +29,9 @@ async function searchBarClick() {
 }
 
 function searchResult(value) {
-  const searchBar = document.querySelector(".movies__search__result");
+  const searchBar = document.querySelector(".movies__top");
 
-  const searchResult = document.querySelector(".movie__search__result");
-
-  const searchBarHTML = `<h2 class="movies__title">
+  const searchBarHTML = `<h2 class="movies__top__title">
   Search results for:
   </h2>
   <h2 class="movie__search__result">"${value}"</h2>`;
